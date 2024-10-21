@@ -11,19 +11,21 @@ const Footer = () => {
     "hover:text-lg transition-all duration-300 ease-in-out cursor-pointer";
   return (
     <div className="mt-4">
-      <div className="bg-[#AB4D03] w-full">
-        <div className="flex flex-wrap md:flex-nowrap max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  mx-auto">
+      <div className="bg-[#AB4D03] w-full overflow-hidden">
+        <div className="flex flex-wrap md:flex-nowrap max-w-6xl  mx-auto">
           {/* Left Section */}
-          <div className="w-full md:w-1/3 py-7 bg-[#AB3E03] text-white shadow-[-200px_0px_0px_#AB3E03] order-1 max-sm:order-2 px-4 sm:px-6">
+          <div className="w-full md:w-1/3 py-7  bg-[#AB3E03] text-white shadow-[-200px_0px_0px_#AB3E03] order-1 max-sm:order-2 px-4 sm:px-6 relative before:absolute before:h-full before:w-[100vw] before:z-0 before:top-0
+           before:right-0 before:bg-[#AB3E03]">
+            <div className="relative z-10">
             <div className="w-44">
               <img className="size-full" src={arihant_logo_white} alt="Logo" />
             </div>
             <div className="mt-4">
               A fresh approach to learning embracing the unconventional.
             </div>
-            <div className="mt-4 text-sm 2xl:text-lg flex flex-col gap-2">
+            <div className="mt-4 text-sm flex flex-col gap-2">
               <div>
-                <h1 className="text-xl 2xl:text-2xl font-semibold">Stay Connected</h1>
+                <h1 className="text-xl font-semibold">Stay Connected</h1>
               </div>
               <div>
                 <p>info@arihantplus.com</p>
@@ -31,9 +33,9 @@ const Footer = () => {
                 <p>(Mon to Sat, 9 AM to 6 PM)</p>
               </div>
             </div>
-            <div className="mt-4 text-sm 2xl:text-lg flex flex-col gap-2">
+            <div className="mt-4 text-sm flex flex-col gap-2">
               <div>
-                <h1 className="text-xl 2xl:text-2xl font-semibold">Stay Updated</h1>
+                <h1 className="text-xl font-semibold">Stay Updated</h1>
               </div>
               <p>
                 Stay updated with the latest news and notifications with Arihant
@@ -71,15 +73,16 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+            </div>
           </div>
 
           {/* Right Section */}
-          <div className="w-full md:w-2/3 bg-[#AB4D03] px-4 sm:px-6 order-2 max-sm:order-1 py-7">
+          <div className="w-full md:w-2/3 bg-[#AB4D03] px-4 sm:px-6 order-2 max-sm:order-1 py-7 ">
             <div className="flex flex-col gap-5">
               {/* Top Categories and Books & Resources */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="col-span-2 flex flex-col gap-2">
-                  <h2 className="text-white font-semibold text-base 2xl:text-xl">
+                  <h2 className="text-white font-semibold text-base">
                     Top Categories
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -160,7 +163,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-white font-semibold text-base 2xl:text-xl">
+                  <h2 className="text-white font-semibold text-base">
                     Books & Resources
                   </h2>
                   <ul className="text-white flex flex-col gap-2 text-sm 2xl:text-lg">
@@ -229,12 +232,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-4 sm:px-6  mx-auto">
+      <div className="max-w-6xl  px-4 sm:px-6  mx-auto">
         <div className="sm:flex justify-between items-center *:max-sm:text-center py-3">
-          <div className="text-sm 2xl:text-xl text-black font-medium">
+          <div className="text-sm text-black font-medium">
           2019-2024. Arihant Publications India Limited
           </div>
-          <div className="text-sm 2xl:text-xl text-black font-medium"> 
+          <div className="text-sm text-black font-medium"> 
           Technology Partners Cleartest
           </div>
         </div>

@@ -91,8 +91,6 @@ const ArihantPlusMasterClassAnimation = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-        } else {
-          setIsInView(false);
         }
       },
       { threshold: 0.1 }

@@ -3,7 +3,7 @@ import BookCard from "../BookCard/BookCard";
 import book1 from "../../assets/img/book01.png";
 import more from "../../assets/img/down.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import CustomButtonSecondary from "../CustomButtonSecondary/CustomButtonSecondary";
 import { useNavigate } from "react-router-dom";
@@ -146,16 +146,11 @@ const BooksComponent = ({ title, button1, button2,id,onClick1,onClick2 }) => {
             spaceBetween={16}
             slidesPerView={2.2}
             observer={true}
-            loop={true}
-            modules={[Pagination, Autoplay, Navigation]}
+            modules={[Pagination, Navigation]}
             navigation={{
               nextEl: `.swiper-button-next-${id}`,
               prevEl: `.swiper-button-prev-${id}`,
             }}
-            // autoplay={{
-            //   delay: 2000,
-            //   disableOnInteraction: false,
-            // }}
             breakpoints={{
               0: {
                 slidesPerView: 2.2,

@@ -21,21 +21,21 @@ const HeroComponent = () => {
         }}
       >
         <SwiperSlide>
-          <div className="">
-            <img className="!w-full hidden sm:flex" src={banner} alt="" />
-            <img className="!w-full sm:hidden " src={bannerSmall} alt="" />
+          <div className="h-[200px]">
+            <img className="!w-full h-full hidden sm:flex" src={banner} alt="" />
+            <img className="!w-full sm:hidden h-full" src={bannerSmall} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <img className="!w-full hidden sm:flex" src={banner} alt="" />
-            <img className="!w-full sm:hidden" src={bannerSmall} alt="" />
+          <div className="h-[200px]">
+            <img className="!w-full hidden h-full sm:flex" src={banner} alt="" />
+            <img className="!w-full sm:hidden h-full" src={bannerSmall} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div>
-            <img className="!w-full hidden sm:flex" src={banner} alt="" />
-            <img className="!w-full sm:hidden" src={bannerSmall} alt="" />
+          <div className="h-[200px]">
+            <img className="!w-full hidden h-full sm:flex" src={banner} alt="" />
+            <img className="!w-full sm:hidden h-full" src={bannerSmall} alt="" />
           </div>
         </SwiperSlide>
       </Swiper>

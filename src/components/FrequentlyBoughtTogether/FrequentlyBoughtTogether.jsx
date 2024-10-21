@@ -2,9 +2,9 @@ import book1 from "../../assets/img/book01.png";
 
 const FrequentlyBoughtTogether = ({ border, title, subTitle }) => {
   return (
-    <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6  mx-auto mt-5 ">
+    <div className="max-w-6xl px-4 mx-auto lg:pt-[74px] pt-16">
       {title ? (
-        <p className="pt-10 pb-8 text-2xl sm:text-3xl font-semibold text-black">
+        <p className=" pb-10 text-2xl sm:text-3xl font-semibold text-black">
           {title}
         </p>
       ) : (
@@ -23,75 +23,75 @@ const FrequentlyBoughtTogether = ({ border, title, subTitle }) => {
           border ? "border border-black" : ""
         }  bg-white shadow-2xl lg:py-5`}
       >
-        <div className="py-3 px-4 max-sm:flex gap-5 max-lg:border-b sm:border-r  border-brown3">
+        <div className="p-7 max-sm:flex gap-5 max-lg:border-b sm:border-r  border-brown3">
           <div className="*:w-[134px] *:!mx-auto">
             <img src={book1} alt="" />
           </div>
           <div className="w-full">
-            <p className="text-[17px] sm:text-lg 2xl:text-2xl 2xl:pt-2 font-semibold">
+            <p className="text-sm leading-[16.8px] font-semibold mt-6">
               14000+ General Studies Chapter- wise PYQs ...
             </p>
-            <div className="bg-yellow4 text-sm 2xl:text-xl 2xl:pt-2 font-normal py-1 px-4 rounded-md mt-2 w-max">
+            <div className="bg-yellow4 text-sm leading-none font-medium py-2 px-[10px] rounded-[5px] mt-5 w-max">
               New Edition
             </div>
             <div className="flex justify-between mt-4">
-              <p className="teaxr-base sm:text-lg font-bold text-black 2xl:text-2xl">
+              <p className="text-base sm:text-lg leading-5 font-bold text-black2">
                 Rs. 665
               </p>
               <input
                 type="checkbox"
-                className="size-4 sm:size-5 2xl:size-6 accent-yellow4 border border-black"
+                className="size-[22.86px] accent-yellow4 border border-black"
               />
             </div>
           </div>
         </div>
 
-        <div className=" max-lg:border-b lg:border-r py-3 px-4 border-gray2 max-sm:flex gap-5">
+        <div className=" max-lg:border-b lg:border-r p-7 border-gray2 max-sm:flex gap-5">
           <div className="*:w-[134px] *:!mx-auto">
             <img src={book1} alt="" />
           </div>
           <div className="w-full">
-            <p className="text-[17px] sm:text-lg 2xl:text-2xl 2xl:pt-2 font-semibold">
+            <p className="text-sm leading-[16.8px] font-semibold mt-6">
               14000+ General Studies Chapter- wise PYQs ...
             </p>
-            <div className="bg-yellow4 text-sm 2xl:text-xl 2xl:pt-2 font-normal py-1 px-4 rounded-md mt-2 w-max">
+            <div className="bg-yellow4 text-sm leading-none font-medium py-2 px-[10px] rounded-[5px] mt-5 w-max">
               New Edition
             </div>
-            <div className="flex justify-between mt-4">
-              <p className="teaxr-base sm:text-lg font-bold text-black 2xl:text-2xl">
+            <div className="flex justify-between items-center mt-5">
+              <p className="text-base sm:text-lg leading-5 font-bold text-black2">
                 Rs. 665
               </p>
               <input
                 type="checkbox"
-                className="size-4 sm:size-5 2xl:size-6 accent-yellow4 border border-black"
+                className="size-[22.86px] accent-yellow4 border border-black"
               />
             </div>
           </div>
         </div>
 
-        <div className="max-sm:border-b sm:border-r py-3 px-4 border-gray2 max-sm:flex gap-5">
+        <div className="max-sm:border-b sm:border-r p-7 border-gray2 max-sm:flex gap-5">
           <div className="*:w-[134px] *:!mx-auto">
             <img src={book1} alt="" />
           </div>
           <div className="w-full">
-            <p className="text-[17px] sm:text-lg 2xl:text-2xl 2xl:pt-2 font-semibold">
+            <p className="text-sm leading-[16.8px] font-semibold mt-6">
               14000+ General Studies Chapter- wise PYQs ...
             </p>
-            <div className="bg-yellow4 text-sm 2xl:text-xl 2xl:pt-2 font-normal py-1 px-4 rounded-md mt-2 w-max">
+            <div className="bg-yellow4 text-sm leading-none font-medium py-2 px-[10px] rounded-[5px] mt-5 w-max">
               New Edition
             </div>
             <div className="flex justify-between mt-4">
-              <p className="teaxr-base sm:text-lg font-bold text-black 2xl:text-2xl">
+              <p className="text-base sm:text-lg leading-5 font-bold text-black2">
                 Rs. 665
               </p>
               <input
                 type="checkbox"
-                className="size-4 sm:size-5 2xl:size-6 accent-yellow4 border border-black"
+                className="size-[22.86px] accent-yellow4 border border-black"
               />
             </div>
           </div>
         </div>
-        <div className="py-3 px-4 flex flex-col place-content-between">
+        <div className="p-7 flex flex-col place-content-between">
           <p className="text-xl font-semibold text-black pb-3 sm:border-b border-black">
             Total 1 Book Selected
           </p>

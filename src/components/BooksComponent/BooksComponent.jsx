@@ -122,7 +122,7 @@ const BooksComponent = ({ title, button1, button2,id,onClick1,onClick2 }) => {
 
   return (<>
     <div className="">
-      <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40 sm:px-6 max-sm:ps-4 mx-auto py-7 2xl:py-10">
+      <div className="max-w-6xl px-4 max-sm:ps-4 mx-auto py-7 ">
         <h1 className="text-2xl sm:text-3xl  font-semibold text-black pt-5">
           {title}
         </h1>

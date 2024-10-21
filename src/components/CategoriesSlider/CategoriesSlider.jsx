@@ -9,7 +9,7 @@ import box from "../../assets/img/box.png";
 import check from "../../assets/img/check.png";
 import global from "../../assets/img/global.png";
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
-import CategoriesCard from '../CategoriesCard/CategoriesCard';
+import CategoriesCard2 from '../CategoriesCard2/CategoriesCard2';
 
 const categories = [
     {
@@ -52,9 +52,9 @@ const categories = [
 const CategoriesSlider = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Swiper
-    className="size-full  *:items-stretch py-4"
+    className="size-full  *:items-stretch pt-[30px]"
     spaceBetween={10}
-    slidesPerView={2}
+    slidesPerView={2.5}
     observer={true}
     modules={[Pagination, Autoplay, Navigation]}
     navigation={{
@@ -63,19 +63,19 @@ const CategoriesSlider = ({ selectedCategory, setSelectedCategory }) => {
     }}
     breakpoints={{
       392: {
-        slidesPerView: 2.2,
-        spaceBetween: 10,
+        slidesPerView: 2.5,
+        spaceBetween: 2,
       },
       500: {
-        slidesPerView: 3,
-        spaceBetween: 10,
+        slidesPerView: 3.3,
+        spaceBetween: 5,
       },
-      768: {
-        slidesPerView: 4,
-        spaceBetween: 10,
+      744: {
+        slidesPerView: 5.7,
+        spaceBetween: 5,
       },
       1024: {
-        slidesPerView: 5,
+        slidesPerView: 7,
         spaceBetween: 10,
       },
       1280: {
@@ -87,7 +87,7 @@ const CategoriesSlider = ({ selectedCategory, setSelectedCategory }) => {
     {categories?.map((item) => (
       <SwiperSlide key={item?.id} className="p-2 *:h-full !h-auto">
         <ErrorBoundary key={item?.id}>
-          <CategoriesCard
+          <CategoriesCard2
             data={item}
             selectedCategory={selectedCategory}
             handleClick={()=>{

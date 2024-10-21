@@ -11,29 +11,23 @@ import { useState } from "react";
 
 const BookCard = ({ data }) => {
   const [isLiked, setIsLiked] = useState(false);
-
   const navigate = useNavigate();
-
   const handleClick = (e) => {
     navigate(`${PAGE_ROUTES.BOOK_DETAIL}/${data?.id ? data?.id : ""}`);
   };
-
   const handleWhishList = (e) => {
     e.stopPropagation();
     // console.log("Added to WhishList");
     setIsLiked(!isLiked);
   };
-
   const handleShare = (e) => {
     e.stopPropagation();
     console.log("Shared");
   };
-
   const handleAddToCart = (e) => {
     e.stopPropagation();
     console.log("Added to Cart");
   };
-
   const handleBuyNow = (e) => {
     e.stopPropagation();
     console.log("Buy Now");
@@ -47,7 +41,7 @@ const BookCard = ({ data }) => {
       >
         <div className="flex items-center justify-between max-[390px]:px-1.5 px-2.5 md:px-3">
           {data?.discount_percentage && (
-            <p className="text-white bg-primary py-1 !leading-[14px] md:py-1.5 px-2 md:px-1.5 text-[9px] md:text-xs 2xl:text-base font-bold rounded-full ">
+            <p className="text-white bg-primary py-1 !leading-[14px] md:py-1.5 px-2 md:px-1.5 text-[9px] md:text-xs font-bold rounded-full ">
               {String(data?.discount_percentage)?.includes("%")
                 ? data?.discount_percentage
                 : data?.discount_percentage + " %"}
@@ -55,7 +49,7 @@ const BookCard = ({ data }) => {
           )}
           <div className="flex relative items-center gap-2">
             <button
-              className="*:max-w-5 *:max-h-4 md:*:max-w-4 md:*:max-h-4 2xl:max-w-6 2xl:max-h-6 cursor-pointer"
+              className="*:max-w-5 *:max-h-4 md:*:max-w-4 md:*:max-h-4 cursor-pointer"
               onClick={handleWhishList}
             >
               {!isLiked ? (
@@ -65,7 +59,7 @@ const BookCard = ({ data }) => {
               )}
             </button>
             <button
-              className=" *:min-w-4 *:max-h-4 md:*:max-h-[18px] *:2xl:max-w-6 *:2xl:max-h-6 cursor-pointer"
+              className=" *:min-w-4 *:max-h-4 md:*:max-h-[18px] cursor-pointer"
               onClick={handleShare}
             >
               <img src={shareIcon} alt="" />
@@ -90,22 +84,22 @@ const BookCard = ({ data }) => {
           </div>
         </div>
         <div className="flex flex-col pt-2.5 sm:pt-3.5 md:pt-5 max-[390px]:px-1.5 px-2.5 md:px-3">
-          <div className="text-xs max-md:tracking-[0.12px] md:text-sm 2xl:text-xl font-semibold text-black  w-full text-ellipsis line-clamp-2 ">
+          <div className="text-xs max-md:tracking-[0.12px] md:text-sm font-semibold text-black  w-full text-ellipsis line-clamp-2 ">
             {data?.name}
           </div>
           <div className="flex  justify-between items-center pt-2.5 sm:pt-3.5 md:pt-6 pb-1.5 sm:pb-4 md:pb-3.5 ">
             <div className="flex gap-2 items-center ">
               {data?.discounted_price && data?.discounted_price != "0" ? (
                 <>
-                  <span className="text-xs sm:text-sm md::text-base 2xl:text-2xl font-medium line-through text-black ">
+                  <span className="text-xs sm:text-sm md::text-base font-medium line-through text-black ">
                     Rs. {data?.price}
                   </span>
-                  <span className="text-xs sm:text-sm md::text-base 2xl:text-2xl font-bold text-primary">
+                  <span className="text-xs sm:text-sm md::text-base font-bold text-primary">
                     Rs. {data?.discounted_price}
                   </span>
                 </>
               ) : (
-                <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-primary">
+                <span className="text-sm sm:text-base font-medium text-primary">
                   Rs. {data?.price}
                 </span>
               )}

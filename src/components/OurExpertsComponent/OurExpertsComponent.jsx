@@ -7,7 +7,7 @@ const data = [1, 2, 4, 5, 6, 7, 8, 9, 0];
 
 const OurExpertsComponent = () => {
   return (
-    <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto  group/test mb-5">
+    <div className="max-w-6xl  px-4 mx-auto  group/test mb-5">
       <div className="bg-[#DFE1E5] relative  p-6 py-12 rounded-xl">
         <p className="text-3xl font-semibold text-black mb-5">Our Experts</p>
         <Swiper

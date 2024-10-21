@@ -3,7 +3,7 @@ import BookCard from "../BookCard/BookCard";
 import book1 from "../../assets/img/book01.png";
 import more from "../../assets/img/down.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import CustomButtonSecondary from "../CustomButtonSecondary/CustomButtonSecondary";
 import { useNavigate } from "react-router-dom";
@@ -122,7 +122,7 @@ const BooksComponent = ({ title, button1, button2,id,onClick1,onClick2 }) => {
 
   return (<>
     <div className="">
-      <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40 sm:px-6 max-sm:ps-4 mx-auto py-7 2xl:py-10">
+      <div className="max-w-6xl  sm:px-6 max-sm:ps-4 mx-auto py-7">
         <h1 className="text-2xl sm:text-3xl  font-semibold text-black pt-5">
           {title}
         </h1>
@@ -146,16 +146,11 @@ const BooksComponent = ({ title, button1, button2,id,onClick1,onClick2 }) => {
             spaceBetween={16}
             slidesPerView={2.2}
             observer={true}
-            loop={true}
-            modules={[Pagination, Autoplay, Navigation]}
+            modules={[Pagination, Navigation]}
             navigation={{
               nextEl: `.swiper-button-next-${id}`,
               prevEl: `.swiper-button-prev-${id}`,
             }}
-            // autoplay={{
-            //   delay: 2000,
-            //   disableOnInteraction: false,
-            // }}
             breakpoints={{
               0: {
                 slidesPerView: 2.2,
@@ -217,7 +212,7 @@ const BooksComponent = ({ title, button1, button2,id,onClick1,onClick2 }) => {
           </button>
         </div>
         <button className="flex items-center gap-2 mt-5 sm:mt-10" onClick={()=>navigate(PAGE_ROUTES.PRODUCT_LIST+"/JEE-&-Other-Eng.-Exams")} >
-          <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black">
+          <span className="text-sm sm:text-base font-medium text-black">
             {" "}
             View All{" "}
           </span>

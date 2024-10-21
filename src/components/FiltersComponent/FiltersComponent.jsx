@@ -8,7 +8,7 @@ const FiltersComponent = ({ children }) => {
   return (
     <>
     <div className="bg-white2 py-4">
-    <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto">
+    <div className="max-w-6xl px-4 mx-auto">
       <div className="flex items-center gap-4 md:hidden flex-nowrap">
         <ul
           className="*:py-1 demo *:whitespace-nowrap py-6 gap-10 scroll-none *:block w-full overflow-hidden overflow-x-auto

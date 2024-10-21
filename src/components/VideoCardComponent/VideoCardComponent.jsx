@@ -23,7 +23,7 @@ const VideoCardComponent = () => {
   };
 
   return (
-    <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  ps-4 sm:px-6 mx-auto py-10 sm:py-16 max-sm:overflow-hidden">
+    <div className="max-w-6xl  ps-4 sm:px-6 mx-auto py-10 sm:py-16 max-sm:overflow-hidden">
       <div className="flex items-center gap-2 sm:gap-6 pb-7 sm:pb-10">
         {/* <button className={`w-max px-2 text-sm sm:w-[240px] sm:h-[55px] 2xl:h-[75px] 2xl:w-[300px] border-secondary border ${selectedTab === "button1"? "bg-secondary text-white":"text-secondary"} rounded-full max-sm:py-2 text-sm sm:text-xl 2xl:text-2xl font-semibold`} onClick={handleButton1} >
         Trending Videos
@@ -128,11 +128,11 @@ const VideoCardComponent = () => {
       </div>
 
       <button className="flex mt-6 sm;mt-[44px] items-center gap-2">
-        <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black" onClick={()=>navigate(PAGE_ROUTES.PRODUCT_LIST+"/JEE-&-Other-Eng.-Exams")} >
+        <span className="text-sm sm:text-base font-medium text-black" onClick={()=>navigate(PAGE_ROUTES.PRODUCT_LIST+"/JEE-&-Other-Eng.-Exams")} >
           {" "}
           View All{" "}
         </span>
-        <span className="mt-1 size-3 sm:size-4 *:size-full *:object-contain *:rotate-180">
+        <span className=" size-3 sm:size-4 *:size-full *:object-contain *:rotate-180">
           <img src={more} alt="" />
         </span>
       </button>

@@ -1,0 +1,408 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* @apply !font-Isidora_Sans; */
+  @apply !font-Montserrat;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #353c41;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /*  Hide scrollbar for IE, Edge and Firefox  */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+  background-color: #f0f0f0; /* Background color */
+  border: 2px solid #ccc; /* Border color */
+  width: 1.25rem; /* Width */
+  height: 1.25rem; /* Height */
+  position: relative;
+  border-radius: 0.25rem; /* Rounded corners */
+}
+.custom-checkbox:checked {
+  background-color: #ff6c00; /* Background color when checked */
+}
+.custom-checkbox:checked::after {
+  content: ""; /* Content for custom appearance */
+  display: none; /* Hide any default styling */
+}
+.demo::-webkit-scrollbar {
+  display: none;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-Thin.eot');
+  src: local('Isidora Sans Thin'), local('IsidoraSans-Thin'),
+      url('./assets/font/IsidoraSans-Thin.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-Thin.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-Thin.woff') format('woff'),
+      url('./assets/font/IsidoraSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-MediumItalic.eot');
+  src: local('Isidora Sans Medium Italic'), local('IsidoraSans-MediumItalic'),
+      url('./assets/font/IsidoraSans-MediumItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-MediumItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-MediumItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-BoldItalic.eot');
+  src: local('Isidora Sans Bold Italic'), local('IsidoraSans-BoldItalic'),
+      url('./assets/font/IsidoraSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-BoldItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-BoldItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-Regular.eot');
+  src: local('Isidora Sans Regular'), local('IsidoraSans-Regular'),
+      url('./assets/font/IsidoraSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-Regular.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-Regular.woff') format('woff'),
+      url('./assets/font/IsidoraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-SemiBoldItalic.eot');
+  src: local('Isidora Sans SemiBold Italic'), local('IsidoraSans-SemiBoldItalic'),
+      url('./assets/font/IsidoraSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-SemiBoldItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-SemiBoldItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-SemiBold.eot');
+  src: local('Isidora Sans SemiBold'), local('IsidoraSans-SemiBold'),
+      url('./assets/font/IsidoraSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-SemiBold.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-SemiBold.woff') format('woff'),
+      url('./assets/font/IsidoraSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-ThinItalic.eot');
+  src: local('Isidora Sans Thin Italic'), local('IsidoraSans-ThinItalic'),
+      url('./assets/font/IsidoraSans-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-ThinItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-ThinItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-Light.eot');
+  src: local('Isidora Sans Light'), local('IsidoraSans-Light'),
+      url('./assets/font/IsidoraSans-Light.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-Light.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-Light.woff') format('woff'),
+      url('./assets/font/IsidoraSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-RegularItalic.eot');
+  src: local('Isidora Sans Regular Italic'), local('IsidoraSans-RegularItalic'),
+      url('./assets/font/IsidoraSans-RegularItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-RegularItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-RegularItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-RegularItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-Bold.eot');
+  src: local('Isidora Sans Bold'), local('IsidoraSans-Bold'),
+      url('./assets/font/IsidoraSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-Bold.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-Bold.woff') format('woff'),
+      url('./assets/font/IsidoraSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-Black.eot');
+  src: local('Isidora Sans Black'), local('IsidoraSans-Black'),
+      url('./assets/font/IsidoraSans-Black.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-Black.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-Black.woff') format('woff'),
+      url('./assets/font/IsidoraSans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-BlackItalic.eot');
+  src: local('Isidora Sans Black Italic'), local('IsidoraSans-BlackItalic'),
+      url('./assets/font/IsidoraSans-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-BlackItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-BlackItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-LightItalic.eot');
+  src: local('Isidora Sans Light Italic'), local('IsidoraSans-LightItalic'),
+      url('./assets/font/IsidoraSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-LightItalic.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-LightItalic.woff') format('woff'),
+      url('./assets/font/IsidoraSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Isidora Sans';
+  src: url('./assets/font/IsidoraSans-Medium.eot');
+  src: local('Isidora Sans Medium'), local('IsidoraSans-Medium'),
+      url('./assets/font/IsidoraSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('./assets/font/IsidoraSans-Medium.woff2') format('woff2'),
+      url('./assets/font/IsidoraSans-Medium.woff') format('woff'),
+      url('./assets/font/IsidoraSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+.anim-container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  aspect-ratio: 369.27 / 254.52; 
+  margin: auto;
+} 
+.anim-p-absolute-transition {
+  position: absolute;
+  transition: all 1.2s ease;
+}
+.anim-circle-1 {
+  z-index: 20;
+  width: 17.67%;
+}
+.anim-circle-2 {
+  z-index: 20;
+  width: 13.45%;
+}
+.anim-circle-1-position {
+  left: 30.72%;
+  top: 11.41%;
+}
+.anim-circle-2-position {
+  left: 83.27%;
+  top: 48.87%;
+}
+.anim-student-1 {
+  z-index: 10;
+  width: 42.94%;
+}
+.anim-student-2 {
+  z-index: 5;
+  width: 30.97%;
+}
+.anim-student-3 {
+  z-index: 5;
+  width: 22.44%;
+}
+.anim-student-1-position-0 {
+  left: 29.87%;
+  top: 0%;
+}
+.anim-student-2-position-0 {
+  left: 24.01%;
+  top: 5.9%;
+}
+.anim-student-3-position-0 {
+  left: 59.22%;
+  top: 18.41%;
+}
+.anim-student-1-position-1 {
+  left: 29.87%;
+  top: 0%;
+}
+.anim-student-2-position-1 {
+  left: 9.01%;
+  top: 5.9%;
+}
+.anim-student-3-position-1 {
+  left: 68.22%;
+  top: 18.41%;
+}
+.anim-student-1-position-2 {
+  left: 29.87%;
+  top: 0%;
+}
+.anim-student-2-position-2 {
+  left: 9.01%;
+  top: 0.97%;
+}
+.anim-student-3-position-2 {
+  left: 68.22%;
+  top: 26.9%;
+}
+.anim-student-1-position-3 {
+  left: 29.87%;
+  top: 0%;
+}
+.anim-student-2-position-3 {
+  left: 9.01%;
+  top: 9.02%;
+}
+.anim-student-3-position-3 {
+  left: 68.22%;
+  top: 14.91%;
+}
+.anim-box-1,
+.anim-box-2,
+.anim-box-3 {
+  z-index: 30;
+  height: 14.14%;
+}
+.anim-box-1-position-1 {
+  left: 32.29%;
+  top: 55.18%;
+}
+.anim-box-2-position-1 {
+  left: -2%;
+  top: 13.9%;
+}
+.anim-box-3-position-1 {
+  left: 56.85%;
+  top: 10.56%;
+}
+.anim-box-1-position-2 {
+  left: 0%;
+  top: 9.17%;
+}
+.anim-box-2-position-2 {
+  left: 60.66%;
+  top: 13.9%;
+}
+.anim-box-3-position-2 {
+  left: 31.5%;
+  top: 55.05%;
+}
+.anim-box-1-position-3 {
+  left: 62.5%;
+  top: 7.99%;
+}
+.anim-box-2-position-3 {
+  left: 32.75%;
+  top: 60.55%;
+}
+.anim-box-3-position-3 {
+  left: -2%;
+  top: 12.91%;
+}
+.anim-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease;
+}
+.anim-hidden-behind-student-2 {
+  opacity: 1;
+  transform: translateX(40px);
+}
+.anim-hidden-behind-student-3 {
+  opacity: 1;
+  transform: translateX(-40px);
+} 
+.anim-show {
+  opacity: 1;
+  transform: translateX(0) ;
+  transition: 0.8s ease;
+}
+.anim-student-2-behind, 
+.anim-student-3-behind, 
+.anim-circle-1-behind, 
+.anim-circle-2-behind {
+  z-index: 10;
+}
+.leading19 {
+  @apply !leading-[19px];
+}
+select {
+  appearance: none; /* Removes default arrow */
+  -webkit-appearance: none; /* For WebKit browsers */
+  -moz-appearance: none; /* For Firefox */
+  
+}
+.select-container {
+  position: relative;
+  display: inline-block;
+}
+.scrollNone::-webkit-scrollbar {
+  display: none;
+}
+/* Customize the width of the scrollbar */
+.testScroll::-webkit-scrollbar {
+    width: 6px; /* Adjust this to match the desired width */
+}
+.testScroll::-webkit-scrollbar {
+  width: 16px;
+  position: relative;
+}
+.testScroll::-webkit-scrollbar-track {
+  background-color: transparent;
+  height: 10px;
+  width: 20px;
+  position: relative;
+}
+.testScrollParent {
+  position: relative;
+}
+.testScrollParent::before {
+  content: '';
+  position: absolute;
+  right: 7.5px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: black;
+  /* z-index: 99; */
+}
+.testScroll::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 28px;
+}

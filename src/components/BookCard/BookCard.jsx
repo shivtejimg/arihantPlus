@@ -1,13 +1,14 @@
 import heartIcon from "../../assets/img/heartIcon.svg";
 import heartIconRed from "../../assets/img/heartIconRed.svg";
 import shareIcon from "../../assets/img/shareIcon.svg";
-import diagonalArrowIcon from "../../assets/img/diagonalArrowIcon.svg";
+// import diagonalArrowIcon from "../../assets/img/diagonalArrowIcon.svg";
 import bag from "../../assets/img/buy_now.png";
 import cart from "../../assets/img/add_to_cart.png";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 import { useNavigate } from "react-router-dom";
 import { PAGE_ROUTES } from "../../constants/RouteConstants";
 import { useState } from "react";
+import toDoArrow from "../../assets/img/toDoArrow.svg";
 
 const BookCard = ({ data }) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -110,13 +111,20 @@ const BookCard = ({ data }) => {
                 </span>
               )}
             </div>
-            <a className="cursor-pointer inline-block *:size-4 md:hover:bg-gray2 rounded-full p-1 group">
+            {/* <a className="cursor-pointer inline-block *:size-4 max-md:bg-gray2 md:hover:bg-gray2 rounded-full p-1 group">
               <img
-                className="md:group-hover:[filter:brightness(20)contrast(2)] max-md:[filter:brightness(10)contrast(1)]"
+                className="max-md:[filter:brightness(8)contrast(1)] md:hover:[filter:brightness(8)contrast(1)] transition-all ease-in-out duration-300"
                 src={diagonalArrowIcon}
                 alt=""
               />
-            </a>
+            </a> */}
+              <div className="max-md:bg-gray2 md:hover:bg-gray2 p-0.5 sm:p-1 md:p-2 rounded-full transition-all duration-300 ease-in-out *:size-3 sm:*:size-3 *:md:size-4">
+              <img
+                className="max-md:[filter:brightness(8)contrast(1)] md:hover:[filter:brightness(8)contrast(1)] transition-all ease-in-out duration-300"
+                src={toDoArrow}
+                alt=""
+              />
+            </div>
           </div>
         </div>
         <div className="max-md:flex justify-between w-full items-center gap-1.5 sm:gap-2 hidden pt-2.5 ">

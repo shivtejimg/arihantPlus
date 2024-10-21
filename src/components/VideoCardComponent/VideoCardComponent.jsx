@@ -132,7 +132,7 @@ const VideoCardComponent = () => {
           {" "}
           View All{" "}
         </span>
-        <span className="mt-1 size-3 sm:size-4 *:size-full *:object-contain *:rotate-180">
+        <span className=" size-3 sm:size-4 *:size-full *:object-contain *:rotate-180">
           <img src={more} alt="" />
         </span>
       </button>

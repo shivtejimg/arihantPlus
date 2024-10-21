@@ -36,6 +36,8 @@ import VideoCardComponent from "../../components/VideoCardComponent/VideoCardCom
 import Countup from "react-countup-animate";
 import { PAGE_ROUTES } from "../../constants/RouteConstants";
 import CustomButtonSecondary from "../../components/CustomButtonSecondary/CustomButtonSecondary";
+import { RESPONSIVE_WIDTH } from "../../constants/WidthConstants";
+import { useMediaQuery } from "../../hooks/useMediaQuery";
 
 
 const data = [1, 2, 3, 4, 5];
@@ -81,6 +83,8 @@ const Home = () => {
       image: nda,
     },
   ]);
+
+  const isLgScreen = useMediaQuery(RESPONSIVE_WIDTH.SM_LAPTOP_SCREEN);
 
   const [catViewMore,setCatViewMore] = useState(false);
 
@@ -158,6 +162,12 @@ const Home = () => {
     setCategories(filtered);
   }
 
+  useEffect(()=>{
+    if(!isLgScreen){
+      handleMore();
+    }
+  },[isLgScreen]);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -201,44 +211,45 @@ const Home = () => {
         <Swiper
           className="size-full pt-[120px] md:pt-32 lg:pt-20  max-sm:px-4 px-6"
           spaceBetween={50}
-          slidesPerView={1}
+          // slidesPerView={1}
+          slidesPerView='auto'
           centeredSlides={true}
           loop={true}
           // loopAdditionalSlides={3}
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination]}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
           }}
-          breakpoints={{
-            // 640: {
-            //   slidesPerView: 1.08,
-            //   spaceBetween: 20,
-            // },
-            640: {
-              slidesPerView: 1.08,
-              spaceBetween: 20,
-            },
-            730: {
-              slidesPerView: 1.1,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 1.15,
-              spaceBetween: 20,
-            },
-            1280: {
-              slidesPerView: 1.3,
-              spaceBetween: 30,
-            },
-            1480: {
-              slidesPerView: 1.15,
-              spaceBetween: 30,
-            },
-          }}
+          // breakpoints={{
+          //   // 640: {
+          //   //   slidesPerView: 1.08,
+          //   //   spaceBetween: 20,
+          //   // },
+          //   640: {
+          //     slidesPerView: 1.08,
+          //     spaceBetween: 20,
+          //   },
+          //   730: {
+          //     slidesPerView: 1.1,
+          //     spaceBetween: 20,
+          //   },
+          //   1024: {
+          //     slidesPerView: 1.15,
+          //     spaceBetween: 20,
+          //   },
+          //   1280: {
+          //     slidesPerView: 1.3,
+          //     spaceBetween: 30,
+          //   },
+          //   1480: {
+          //     slidesPerView: 1.15,
+          //     spaceBetween: 30,
+          //   },
+          // }}
         >
           {data?.map((el, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className={'max-w-[calc(72rem_-_16px)]'}>
               <div className=" py-2 *:h-52 w-full *:w-full  sm:*:h-72 *:object-cover *:rounded-2xl">
                 <img src={HeroHome} />
               </div>
@@ -272,7 +283,7 @@ const Home = () => {
             </ErrorBoundary>
           ))}
         </div>
-        {!catViewMore ? <button className="flex mb-3  items-center gap-2 mt-12" onClick={handleMore} >
+        {!catViewMore ? <button className="flex mb-3 lg:hidden items-center gap-2 mt-12" onClick={handleMore} >
           <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black">
             {" "}
             View More{" "}
@@ -280,7 +291,7 @@ const Home = () => {
           <span className="size-3 sm:size-4 *:size-full *:object-contain *:rotate-[270deg]">
             <img src={more} alt="" />
           </span>
-        </button>:<button className="flex mb-3  items-center gap-2 mt-12" onClick={handleLess} >
+        </button>:<button className="flex mb-3 lg:hidden items-center gap-2 mt-12" onClick={handleLess} >
           <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black">
             {" "}
             View Less{" "}
@@ -289,6 +300,15 @@ const Home = () => {
             <img src={more} alt="" />
           </span>
         </button>}
+        <button className="lg:flex mb-3 hidden  items-center gap-2 mt-12" >
+          <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black">
+            {" "}
+            View More{" "}
+          </span>
+          <span className="size-3 sm:size-4 *:size-full *:object-contain *:rotate-[180deg]">
+            <img src={more} alt="" />
+          </span>
+        </button>
       </div>
 
       <div className="bg-[#6F757C12] md:pb-16">

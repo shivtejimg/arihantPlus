@@ -64,7 +64,7 @@ const BookListComponent = () => {
       </ErrorBoundary>
 
       <div className="bg-[#EEEAEC]">
-        <div className="relative group/nav  max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto  md:py-16 2xl:py-10">
+        <div className="relative group/nav  max-w-6xl   px-4 mx-auto  md:py-16 ">
           <h1 className="text-2xl sm:text-3xl pt-14 font-semibold text-black pb-12">
             Latest Test Series
           </h1>
@@ -83,7 +83,7 @@ const BookListComponent = () => {
 
       <ArihantPlusMasterClass />
 
-      <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto py-6">
+      <div className="max-w-6xl   px-4 mx-auto py-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="w-full aspect-[1/.4] rounded-xl overflow-hidden *:size-full *:object-cover hover:scale-[1.02] duration-300 hover:shadow-2xl">
             <img src={banner1} alt="" />

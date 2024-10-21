@@ -22,27 +22,27 @@ const ProductListPage = () => {
         </ErrorBoundary>
 
         <div className="bg-gray4/50 py-4">
-          <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40 mx-auto px-6 lg:px-8 pt-4">
-            <div className="flex items-center">
+          <div className="xl:max-w-6xl  mx-auto px-4  pt-4">
+            <div className="flex items-center *:leading-none">
               <Link
-                className="text-sm 2xl:text-xl font-medium text-gray1 inline-block"
+                className="text-sm  font-medium text-gray1 inline-block"
                 to={PAGE_ROUTES.HOME}
               >
                 Home
               </Link>
-              <span className="px-1 text-sm font-medium 2xl:text-xl text-black">
+              <span className="px-1 text-sm font-medium  text-black">
                 /
               </span>
-              <Link className="text-sm font-medium 2xl:text-xl text-black">
+              <Link className="text-sm font-medium  text-black">
                 Jee & Other Eng Entrances
               </Link>
             </div>
           </div>
 
-          <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto mt-4">
-            <p className=" md:text-3xl text-2xl  font-semibold text-black">
-              JEE & Other Eng Entrances
-            </p>
+          <div className="xl:max-w-6xl  px-4 mx-auto pt-[43px] ">
+            <div className=" text-3xl   font-semibold leading-none text-[#353C41]">
+              JEE & Other Eng Entrances 
+            </div>
             <CategoriesSlider
               selectedCategory={selectedCategory}
               setSelectedCategory={setSelectedCategory}

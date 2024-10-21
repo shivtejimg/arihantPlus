@@ -42,10 +42,10 @@ const BookCard = ({ data }) => {
   return (
     <ErrorBoundary>
       <div
-        className="text-base max-[390px]:px-1.5 px-2.5 pt-1.5 sm:pt-4 pb-2.5 md:p-[11px,12px,5px,13px] relative rounded-[10px] max-md:shadow-sm max-md:bg-white group max-h-content h-full hover:bg-[#FFFF] duration-300 hover:shadow-md"
+        className="text-base  pt-1.5 sm:pt-4 pb-2.5 relative rounded-[10px] max-md:shadow-sm max-md:bg-white group max-h-content h-full hover:bg-[#FFFF] duration-300 hover:shadow-md"
         onClick={handleClick}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between max-[390px]:px-1.5 px-2.5 md:px-3">
           {data?.discount_percentage && (
             <p className="text-white bg-primary py-1 !leading-[14px] md:py-1.5 px-2 md:px-1.5 text-[9px] md:text-xs 2xl:text-base font-bold rounded-full ">
               {String(data?.discount_percentage)?.includes("%")
@@ -72,7 +72,7 @@ const BookCard = ({ data }) => {
             </button>
           </div>
         </div>
-        <div className="w-full relative max-md:px-2 aspect-[1/1.1] md:aspect-[1/1.2] *:object-cover *:size-full mt-2">
+        <div className="w-full relative max-[390px]px-3.5 max-md:px-4  md:px-3 aspect-[1/1.1] md:aspect-[1/1.2] *:object-cover *:size-full mt-2">
           <img src={data?.thumbnail || ""} alt="" />
           <div className="absolute z-50 sm:group-hover:opacity-100 duration-700 sm:opacity-0 px-4 !h-10 w-full justify-between bottom-0 flex max-md:hidden">
             <button
@@ -89,11 +89,11 @@ const BookCard = ({ data }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col pt-2.5 sm:pt-3.5 md:pt-5">
+        <div className="flex flex-col pt-2.5 sm:pt-3.5 md:pt-5 max-[390px]:px-1.5 px-2.5 md:px-3">
           <div className="text-xs max-md:tracking-[0.12px] md:text-sm 2xl:text-xl font-semibold text-black  w-full text-ellipsis line-clamp-2 ">
             {data?.name}
           </div>
-          <div className="flex  justify-between items-center pt-2.5 sm:pt-3.5 md:pt-6 pb-1.5 sm:pb-4 md:pb-3.5 max-md:border-b max-md:border-gray3">
+          <div className="flex  justify-between items-center pt-2.5 sm:pt-3.5 md:pt-6 pb-1.5 sm:pb-4 md:pb-3.5 ">
             <div className="flex gap-2 items-center ">
               {data?.discounted_price && data?.discounted_price != "0" ? (
                 <>
@@ -119,7 +119,8 @@ const BookCard = ({ data }) => {
             </a>
           </div>
         </div>
-        <div className="max-md:flex justify-between w-full items-center gap-1.5 sm:gap-2 hidden pt-2.5 ">
+        <div className="max-md:border-t max-md:border-gray4">
+        <div className="max-md:flex justify-between w-full items-center gap-1.5 sm:gap-2 hidden pt-2.5 max-[390px]:px-1.5 px-2.5 md:px-3">
           <button className="w-full flex items-center justify-center gap-1 text-[9px] font-semibold text-nowrap border-gray1 border rounded-[5px] p-[2px]">
             <img src={cart} alt="Add to cart" className="size-2  lg:size-6 " />
             Add to cart
@@ -128,6 +129,7 @@ const BookCard = ({ data }) => {
             <img src={bag} alt="Buy Now" className=" size-2  invert" />
             Buy Now
           </button>
+        </div>
         </div>
       </div>
     </ErrorBoundary>

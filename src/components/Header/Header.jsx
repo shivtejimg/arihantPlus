@@ -18,17 +18,17 @@ const Header = () => {
   return (
     <ErrorBoundary>
       <header className="bg-white fixed z-[99] w-full shadow-md">
-        <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40 lg:px-8  px-4 sm:px-6  mx-auto pt-6 pb-2.5 lg:py-[18px] flex items-center justify-between">
-          <div className="flex items-center lg:gap-4 xl;gap-6 w-full">
-            <div className="flex items-center gap-5 xl:gap-7 w-full">
-              <div className="flex items-center justify-between gap-3 xl:gap-4 w-full">
+        <div className="max-w-6xl px-4 mx-auto pt-6 pb-2.5 lg:py-[18px] flex items-center justify-between">
+          <div className="flex items-center lg:gap-4  w-full">
+            <div className="flex items-center gap-5 w-full">
+              <div className="flex items-center justify-between gap-3  w-full">
                 <Link
-                  className=" w-36 md:w-48 lg:w-40 xl:w-48 h-auto inline-block *:size-full"
+                  className=" w-36 md:w-48 lg:w-40 h-auto inline-block *:size-full"
                   to={PAGE_ROUTES.HOME}
                 >
                   <img src={logo} alt="logo" />
                 </Link>
-                <div className="w-[189px] lg:w-40 xl:w-[189px]  2xl:w-64 hidden lg:flex items-center justify-between relative ring-1 px-3 ring-gray3 hover:ring-slate-300 rounded-xl py-[7px]">
+                <div className="w-[189px] lg:w-40  xl:w-[200px] hidden lg:flex items-center justify-between relative ring-1 px-3 ring-gray3 hover:ring-slate-300 rounded-xl py-[7px]">
                   <input
                     type="text"
                     placeholder="Search"
@@ -39,7 +39,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden sm:block lg:hidden border-gray1 border pe-20 px-8 py-1.5 rounded-full relative">
+              <div className="hidden sm:block lg:hidden border-gray1 border pe-20 px-3 py-1.5 rounded-full relative">
                 <input
                   type="text"
                   placeholder="Search"
@@ -49,28 +49,28 @@ const Header = () => {
                   <img src={search} alt="" />
                 </div>
               </div>
-              <ul className="lg:flex items-center gap-4 hidden w-full xl:tracking-[0.6px] ">
-                <Link className="text-sm 2xl:text-lg text-black font-semibold text-nowrap">
+              <ul className="lg:flex items-center gap-3 xl:gap-6 hidden w-full  ">
+                <Link className="text-sm  text-black font-semibold text-nowrap">
                   <li>Books</li>
                 </Link>
-                <Link className="text-sm 2xl:text-lg text-black font-semibold text-nowrap">
+                <Link className="text-sm  text-black font-semibold text-nowrap">
                   <li>Test Series</li>
                 </Link>
-                <Link className="text-sm 2xl:text-lg text-black font-semibold text-nowrap">
+                <Link className="text-sm  text-black font-semibold text-nowrap">
                   <li>Videos</li>
                 </Link>
-                <Link className="text-sm 2xl:text-lg text-black font-semibold text-nowrap">
+                <Link className="text-sm  text-black font-semibold text-nowrap">
                   <li>Book/Coupon Code</li>
                 </Link>
-                <Link className="text-sm 2xl:text-lg text-black font-semibold text-nowrap">
+                <Link className="text-sm  text-black font-semibold text-nowrap">
                   <li>Doubt Solver</li>
                 </Link>
               </ul>
             </div>
-            <div className="flex gap-2 items-center cursor-pointer flex-nowrap">
+            <div className="flex gap-3.5 items-center cursor-pointer flex-nowrap">
               {/* {!isLoggenIn ? (
                 <button
-                  className="bg-primary text-nowrap rounded-full text-sm 2xl:text-lg font-semibold text-white hidden lg:flex "
+                  className="bg-primary text-nowrap rounded-full text-sm  font-semibold text-white hidden lg:flex "
                   onClick={() => setIsLoggenIn(true)}
                 >
                   Login/Register
@@ -78,8 +78,8 @@ const Header = () => {
               ) : (
                 ""
               )} */}
-              <button className="px-4 py-2 text-nowrap bg-primary text-white text-sm font-semibold rounded-full hidden lg:flex">
-                                 Login/Register
+              <button className="p-2.5 text-nowrap bg-primary text-white text-sm font-semibold rounded-full hidden lg:flex leading-4">
+                Login/Register
               </button>
               {isLoggenIn ? (
                 <div className="text-primary font-semibold text-sm hidden lg:flex text-nowrap ">
@@ -119,9 +119,8 @@ const Header = () => {
             </div>
             <button
               onClick={() => setShowSideBar(true)}
-              className={` sm:hidden *:min-w-8 *:size-8 ${
-                showSideBar ? "hidden" : ""
-              }`}
+              className={` sm:hidden *:min-w-8 *:size-8 ${showSideBar ? "hidden" : ""
+                }`}
             >
               <img src={navbtn} alt="" />
             </button>
@@ -129,25 +128,25 @@ const Header = () => {
         </div>
         <div>
           {/* Tab view */}
-          <div className="max-w-7xl mx-auto  sm:px-6 px-4 lg:px-8 flex items-center justify-between pb-4 lg:hidden gap-2">
-            <ul className=" lg:hidden items-center gap-7  hidden sm:flex w-full  xl:tracking-[0.6px]">
-              <Link className="text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  2xl:text-lg text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
+          <div className="max-w-6xl mx-auto   px-4 lg:px-8 flex items-center justify-between pb-4 lg:hidden gap-2 min-[700px]:gap-14">
+            <ul className=" lg:hidden items-center gap-3 min-[700px]:gap-7  hidden sm:flex w-full  xl:tracking-[0.6px]">
+              <Link className="text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
                 <li>Books</li>
               </Link>
-              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  2xl:text-lg text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
+              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
                 <li>Test Series</li>
               </Link>
-              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  2xl:text-lg text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
+              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
                 <li>Videos</li>
               </Link>
-              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  2xl:text-lg text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
+              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
                 <li>Book/Coupon Code</li>
               </Link>
-              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  2xl:text-lg text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
+              <Link className=" text-xs md:text-sm tracking-[0.48px] md:tracking-normal max-[700px]:tracking-tight  text-black font-semibold text-nowrap !leading-[63%] pt-0.5">
                 <li>Doubt Solver</li>
               </Link>
             </ul>
-            <div className="hidden sm:flex items-center lg:hidden">
+            <div className="hidden sm:flex items-center gap-3 lg:hidden">
               {/* <button className="w-full py-3 px-9 font-semibold text-white text-xs  rounded-3xl bg-primary !leading-[63%]"
                 onClick={() => navigate(AUTH_ROUTES.GET_OTP)}
               >
@@ -159,7 +158,7 @@ const Header = () => {
               >
                 Login/Register
               </button>
-              <div className="*:md:size-[30px] min-w-[30px] :size-[30px] :2xl:size-[40px] ms-3 max-[700px]:ms-1  lg:flex">
+              <div className="*:md:size-[30px] min-w-[30px] :size-[30px] :2xl:size-[40px]  max-[700px]:ms-1  lg:flex">
                 <img src={user} alt="" />
               </div>
             </div>
@@ -217,24 +216,24 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            {/* <div className="absolute -top-24 right-6 ">
-                <button
-                  className="flex items-center justify-center size-8 z-50 *:size-[20px] bg-secondary text-white rounded-full"
-                  onClick={() => setShowSideBar(false)}
+            <div className="absolute -top-24 right-4 ">
+              <button
+                className="flex items-center justify-center size-7 z-50 *:size-[20px] bg-secondary text-white rounded-full"
+                onClick={() => setShowSideBar(false)}
+              >
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  strokeWidth="0"
+                  viewBox="0 0 512 512"
+                  height="100%"
+                  width="100%"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 512 512"
-                    height="100%"
-                    width="100%"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34z"></path>
-                  </svg>
-                </button>
-              </div> */}
+                  <path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34z"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
       </SideBar>
@@ -250,24 +249,24 @@ const Header = () => {
 export default Header;
 
 
-{/* <div className="absolute"> */}
-        //   <button
-        //     // className="flex items-center justify-center size-8 z-50 *:size-[20px] bg-secondary text-white rounded-full"
-        //     className={`fixed top-[11px] right-0 z-50 h-screen p-4  transition-transform ${
-        //       showSideBar ? "transform-none" : "translate-x-full"
-        //     } bg-white w-[85%] sm:w-1/2 rounded-bl-3xl`}
-        //     onClick={() => setShowSideBar(false)}
-        //   >
-        //     <svg
-        //       stroke="currentColor"
-        //       fill="currentColor"
-        //       strokeWidth="0"
-        //       viewBox="0 0 512 512"
-        //       height="100%"
-        //       width="100%"
-        //       xmlns="http://www.w3.org/2000/svg"
-        //     >
-        //       <path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34z"></path>
-        //     </svg>
-        //   </button>
-        // </div>
+{/* <div className="absolute"> */ }
+//   <button
+//     // className="flex items-center justify-center size-8 z-50 *:size-[20px] bg-secondary text-white rounded-full"
+//     className={`fixed top-[11px] right-0 z-50 h-screen p-4  transition-transform ${
+//       showSideBar ? "transform-none" : "translate-x-full"
+//     } bg-white w-[85%] sm:w-1/2 rounded-bl-3xl`}
+//     onClick={() => setShowSideBar(false)}
+//   >
+//     <svg
+//       stroke="currentColor"
+//       fill="currentColor"
+//       strokeWidth="0"
+//       viewBox="0 0 512 512"
+//       height="100%"
+//       width="100%"
+//       xmlns="http://www.w3.org/2000/svg"
+//     >
+//       <path d="m289.94 256 95-95A24 24 0 0 0 351 127l-95 95-95-95a24 24 0 0 0-34 34l95 95-95 95a24 24 0 1 0 34 34l95-95 95 95a24 24 0 0 0 34-34z"></path>
+//     </svg>
+//   </button>
+// </div>

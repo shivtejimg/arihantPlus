@@ -37,7 +37,7 @@ const TestSeriesListComponent = () => {
       <FiltersComponent>
         <div className="w-full ">
         {!isTestDetails ? (
-          <div className="md:col-span-9  col-span-12 sticky top-0 ">
+          <div className="md:col-span-8  col-span-12 sticky top-0 ">
             <div className="w-full">
               <div className="font-medium text-2xl text-[#6F757C]pb-6">
                 Attempt Free Test

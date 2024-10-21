@@ -36,7 +36,7 @@ const ArihantPlusMasterClass = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto  py-8 overflow-hidden">
+    <div className="max-w-6xl  px-4 mx-auto  py-8 overflow-hidden">
       <div className="grid grid-cols-12 items-center">
 
         <div className="lg:col-span-6 md:col-span-5 col-span-12 ">

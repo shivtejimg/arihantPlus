@@ -7,7 +7,7 @@ const NewsMarqueeComponent = () => {
 
     <div className="bg-gray4/50 py-4">
     <div className="bg-white">
-      <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto">
+      <div className="max-w-6xl px-4 mx-auto">
         <marquee behavior="" direction="">
           <div className="flex gap-3 overflow-hidden overflow-x-auto no-scrollbar py-3 item-center">
             <div className="flex gap-1 items-center flex-nowrap">

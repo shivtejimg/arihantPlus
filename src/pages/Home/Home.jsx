@@ -49,7 +49,7 @@ const Home = () => {
   const newsLetterRef = useRef(null);
   const navigate = useNavigate();
   const [selectedTab, setSelectedTab] = useState("button1");
-  const [categories,setCategories] = useState([
+  const [categories, setCategories] = useState([
     {
       id: "1",
       name: "JEE & Other Eng. Exams",
@@ -82,79 +82,79 @@ const Home = () => {
     },
   ]);
 
-  const [catViewMore,setCatViewMore] = useState(false);
+  const [catViewMore, setCatViewMore] = useState(false);
 
-  const handleMore=()=>{
+  const handleMore = () => {
     setCatViewMore(true);
-    setCategories(prev=>([
+    setCategories(prev => ([
       ...prev,
-        {
-    id: "7",
-    name: "IAS & State PSC",
-    image: upsc,
-  },
-  {
-    id: "8",
-    name: "Banking & Insurance",
-    image: banker,
-  },
-  {
-    id: "9",
-    name: "SSC Exams",
-    image: ssc,
-  },
-  {
-    id: "10",
-    name: "Railways Exams",
-    image: railway,
-  },
-  {
-    id: "11",
-    name: "Army, Navy & Airforce",
-    image: army,
-  },
-  {
-    id: "12",
-    name: "CTET & State TETs",
-    image: ctet,
-  },
+      {
+        id: "7",
+        name: "IAS & State PSC",
+        image: upsc,
+      },
+      {
+        id: "8",
+        name: "Banking & Insurance",
+        image: banker,
+      },
+      {
+        id: "9",
+        name: "SSC Exams",
+        image: ssc,
+      },
+      {
+        id: "10",
+        name: "Railways Exams",
+        image: railway,
+      },
+      {
+        id: "11",
+        name: "Army, Navy & Airforce",
+        image: army,
+      },
+      {
+        id: "12",
+        name: "CTET & State TETs",
+        image: ctet,
+      },
 
-  {
-    id: "13",
-    name: "Other Central Govt. Exams",
-    image: centeral,
-  },
-  {
-    id: "14",
-    name: "State Govt. Exams",
-    image: state,
-  },
-  {
-    id: "15",
-    name: "Teacher Recruitment",
-    image: teacher,
-  },
-  {
-    id: "16",
-    name: "School  Curriculam",
-    image: school1,
-  },
-  {
-    id: "17",
-    name: "School  Admissions",
-    image: school2,
-  },
-  {
-    id: "18",
-    name: "ITI Books",
-    image: iti,
-  },
+      {
+        id: "13",
+        name: "Other Central Govt. Exams",
+        image: centeral,
+      },
+      {
+        id: "14",
+        name: "State Govt. Exams",
+        image: state,
+      },
+      {
+        id: "15",
+        name: "Teacher Recruitment",
+        image: teacher,
+      },
+      {
+        id: "16",
+        name: "School  Curriculam",
+        image: school1,
+      },
+      {
+        id: "17",
+        name: "School  Admissions",
+        image: school2,
+      },
+      {
+        id: "18",
+        name: "ITI Books",
+        image: iti,
+      },
     ]))
   }
-  
-  const handleLess=()=>{
+
+  const handleLess = () => {
     setCatViewMore(false);
-    const filtered = categories.filter((item,i)=>i<=5);
+    const filtered = categories.filter((item, i) => i <= 5);
     setCategories(filtered);
   }
 
@@ -246,14 +246,14 @@ const Home = () => {
           ))}
         </Swiper>
       </ErrorBoundary>
-      <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40 px-4 sm:px-6 mx-auto py-6 2xl:py-10">
-        <p className="text-base 2xl:text-2xl   font-medium text-black">
+      <div className="max-w-6xl  px-4 sm:px-6 mx-auto py-6 ">
+        <p className="text-base    font-medium text-black">
           Tools and Resources{" "}
         </p>
         <div className="text-2xl sm:text-5xl font-semibold text-black">
           Explore our <span className="text-primary">Top Categories</span>
         </div>
-        <p className="text-sm sm:text-xl 2xl:text-2xl font-normal text-[#6F757C] pt-3 pb-6 w-full sm:w-2/3 text-pretty">
+        <p className="text-sm sm:text-xl font-normal text-[#6F757C] pt-3 pb-6 w-full sm:w-2/3 text-pretty">
           Whether you want to be a doctor, an engineer, a bureaucrat or want to
           join government to help them run smoothly or simply want to excel in
           your school studies, we have got you covered.
@@ -273,15 +273,15 @@ const Home = () => {
           ))}
         </div>
         {!catViewMore ? <button className="flex mb-3  items-center gap-2 mt-12" onClick={handleMore} >
-          <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black">
+          <span className="text-sm sm:text-base font-medium text-black">
             {" "}
             View More{" "}
           </span>
           <span className="size-3 sm:size-4 *:size-full *:object-contain *:rotate-[270deg]">
             <img src={more} alt="" />
           </span>
-        </button>:<button className="flex mb-3  items-center gap-2 mt-12" onClick={handleLess} >
-          <span className="text-sm sm:text-base 2xl:text-2xl font-medium text-black">
+        </button> : <button className="flex mb-3  items-center gap-2 mt-12" onClick={handleLess} >
+          <span className="text-sm sm:text-base font-medium text-black">
             {" "}
             View Less{" "}
           </span>
@@ -295,16 +295,16 @@ const Home = () => {
         <BooksComponent button1={true} button2={true} />
       </div>
 
-      <div className="py-10 md:py-16 2xl:py-10">
+      <div className="py-10 md:py-16 ">
         <div>
-          <div className="relative group/nav  max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40 ps-4 sm:px-6 mx-auto  m:py-5 2xl:py-10 max-sm:overflow-hidden">
+          <div className="relative group/nav  max-w-6xl  ps-4 sm:px-6 mx-auto  m:py-5 max-sm:overflow-hidden">
             <div className="flex items-center gap-3 md:gap-6 pb-6 md:pb-12">
               {/* <button
                 className={`min-w-[126px] px-2 max-sm:py-2 sm:w-[200px] md:w-[200px] 2xl:w-[300px] sm:h-[55px]  2xl:h-[75px] border-secondary border ${
                   selectedTab === "button1"
                     ? "bg-secondary text-white"
                     : "text-secondary"
-                } rounded-full text-sm sm:text-xl 2xl:text-2xl font-semibold`}
+                } rounded-full text-sm sm:text-xl  font-semibold`}
                 onClick={() => setSelectedTab("button1")}
               >
                 Latest Test Series
@@ -318,18 +318,18 @@ const Home = () => {
                   selectedTab === "button2"
                     ? "bg-secondary text-white"
                     : "text-secondary"
-                } border-secondary border rounded-full text-sm sm:text-xl 2xl:text-2xl font-semibold`}
+                } border-secondary border rounded-full text-sm sm:text-xl  font-semibold`}
                 onClick={() => setSelectedTab("button2")}
               >
                 Best Seller
               </button> */}
               <CustomButtonSecondary selected={selectedTab === "button2"} onClick={() => setSelectedTab("button2")} >
-              Best Seller
+                Best Seller
               </CustomButtonSecondary>
             </div>
             <TestSeriesComponent />
-            <button className="flex items-center gap-2 max-md:mt-16" onClick={()=>navigate(PAGE_ROUTES.PRODUCT_LIST+"/JEE-&-Other-Eng.-Exams")} >
-              <span className="text-sm sm:text-base  2xl:text-2xl font-medium text-black">
+            <button className="flex items-center gap-2 max-md:mt-16" onClick={() => navigate(PAGE_ROUTES.PRODUCT_LIST + "/JEE-&-Other-Eng.-Exams")} >
+              <span className="text-sm sm:text-base   font-medium text-black">
                 {" "}
                 View All{" "}
               </span>
@@ -342,14 +342,14 @@ const Home = () => {
       </div>
 
       <div className="bg-[#C63252] ">
-        <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-4 sm:px-6 mx-auto py-28">
+        <div className="max-w-6xl   px-4 sm:px-6 mx-auto py-28">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 !gap-4">
             <div className="bg-white group rounded-xl p-4">
               <div className="flex items-center pb-2 gap-6">
                 <div className="size-8 lg:size-10 *:size-full *:object-contain">
                   <img src={notification} alt="" />
                 </div>
-                <div className="text-xl lg:text-2xl 2xl:text-4xl font-semibold text-black group-hover:scale-105 duration-300">
+                <div className="text-xl lg:text-2xl  font-semibold text-black group-hover:scale-105 duration-300">
                   Latest News / Notifications
                 </div>
               </div>
@@ -358,7 +358,7 @@ const Home = () => {
                   {" "}
                   1
                 </div>
-                <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black">
+                <div className="text-xs lg:text-sm  font-semibold text-black">
                   Lorem ipsum dolor sit amet, consectetur{" "}
                 </div>
               </div>
@@ -367,7 +367,7 @@ const Home = () => {
                   {" "}
                   1
                 </div>
-                <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black">
+                <div className="text-xs lg:text-sm  font-semibold text-black">
                   Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet,
                   consectetur{" "}
                 </div>
@@ -377,7 +377,7 @@ const Home = () => {
                   {" "}
                   1
                 </div>
-                <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black">
+                <div className="text-xs lg:text-sm  font-semibold text-black">
                   Lorem ipsum dolor sit amet, consectetur{" "}
                 </div>
               </div>
@@ -388,7 +388,7 @@ const Home = () => {
                 <div className="size-8 lg:size-10 *:size-full *:object-contain">
                   <img src={mock} alt="" />
                 </div>
-                <div className="text-xl lg:text-2xl 2xl:text-4xl font-semibold text-black group-hover:scale-105 duration-300">
+                <div className="text-xl lg:text-2xl  font-semibold text-black group-hover:scale-105 duration-300">
                   Attempt FREE MOCK TEST
                 </div>
               </div>
@@ -397,7 +397,7 @@ const Home = () => {
                   {" "}
                   1
                 </div>
-                <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black">
+                <div className="text-xs lg:text-sm  font-semibold text-black">
                   Lorem ipsum dolor sit amet, consectetur{" "}
                 </div>
               </div>
@@ -406,7 +406,7 @@ const Home = () => {
                   {" "}
                   1
                 </div>
-                <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black">
+                <div className="text-xs lg:text-sm  font-semibold text-black">
                   Lorem ipsum dolor sit amet, consectetur ipsum dolor sit amet,
                   consectetur{" "}
                 </div>
@@ -416,7 +416,7 @@ const Home = () => {
                   {" "}
                   1
                 </div>
-                <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black">
+                <div className="text-xs lg:text-sm  font-semibold text-black">
                   Lorem ipsum dolor sit amet, consectetur{" "}
                 </div>
               </div>
@@ -426,11 +426,11 @@ const Home = () => {
                 <div className="size-8 lg:size-10 *:size-full *:object-contain">
                   <img src={gift} alt="" />
                 </div>
-                <div className="text-xl lg:text-2xl 2xl:text-4xl font-semibold text-black group-hover:scale-105 duration-300">
+                <div className="text-xl lg:text-2xl  font-semibold text-black group-hover:scale-105 duration-300">
                   Day Challenge & Win gauranted Gift
                 </div>
               </div>
-              <div className="text-xs lg:text-sm 2xl:text-xl font-semibold text-black pb-2">
+              <div className="text-xs lg:text-sm  font-semibold text-black pb-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
               </div>
@@ -438,13 +438,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-  
-    <div className="md:mt-3" >
-      <VideoCardComponent />
-  </div>
+
+      <div className="md:mt-3" >
+        <VideoCardComponent />
+      </div>
 
       <div className="bg-[#CCB9C4] group md:py-1 py-6 md:mt-7" ref={newsLetterRef}>
-        <div className="grid grid-cols-12 justify-between items-center max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-4 sm:px-6 mx-auto">
+        <div className="grid grid-cols-12 justify-between items-center max-w-6xl   px-4 sm:px-6 mx-auto">
           <div className="col-span-8">
             <div className="text-sm  text-pretty sm:text-2xl md:text-3xl text-white font-semibold">
               Our Monthly Newsletter for Exclusive Content, Exams Tips, New
@@ -460,20 +460,19 @@ const Home = () => {
             </button>
           </div>
           <div
-            className={`col-span-4 *:w-[349px] *:md:h-[416px] smh-[178px] *:object-contain ${
-              isNewsLetterInView ? "animate-ctaanimation" : ""
-            } duration-10 `}
+            className={`col-span-4 *:w-[349px] *:md:h-[416px] smh-[178px] *:object-contain ${isNewsLetterInView ? "animate-ctaanimation" : ""
+              } duration-10 `}
           >
             <img src={cta} alt="" />
           </div>
         </div>
       </div>
 
-      <div className=" max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-4 sm:px-6 mx-auto py-16">
-        <p className="text-xl sm:text-3xl 2xl:text-4xl font-semibold text-black">
+      <div className=" max-w-6xl   px-4 sm:px-6 mx-auto py-16">
+        <p className="text-xl sm:text-3xl  font-semibold text-black">
           The Journey
         </p>
-        <p className=" sm:w-2/3 max-sm:text-xs 2xl:text-2xl text-pretty text-[#6F757C] font-normal">
+        <p className=" sm:w-2/3 max-sm:text-xs  text-pretty text-[#6F757C] font-normal">
           From one Man’s dream to passion of thousands individuals, measure of
           our success has always been your achievements. Since 1997, we have
           come far yet we feel the journey has just begun.
@@ -485,7 +484,7 @@ const Home = () => {
                 <Countup number={27.5} startDelay={0.5} />
                 <div>L</div>
               </div>
-              <p className="text-[#6F757C] text-[10px] sm:text-base 2xl:text-2xl text-center">
+              <p className="text-[#6F757C] text-[10px] sm:text-base  text-center">
                 Active Users
               </p>
             </div>
@@ -499,7 +498,7 @@ const Home = () => {
                 <Countup number={20} startDelay={0.5} />
                 <div>+</div>
               </div>
-              <p className="text-[#6F757C] text-[10px] sm:text-base 2xl:text-2xl text-center">
+              <p className="text-[#6F757C] text-[10px] sm:text-base  text-center">
                 Years of existence
               </p>
             </div>
@@ -512,7 +511,7 @@ const Home = () => {
               <div className="flex justify-center  items-center *:font-semibold text-base sm:text-3xl md:text-[40px] text-primary">
                 <Countup number={23} startDelay={0.5} />
               </div>
-              <p className="text-[#6F757C] text-[10px] sm:text-base 2xl:text-2xl text-center">
+              <p className="text-[#6F757C] text-[10px] sm:text-base  text-center">
                 Offices Pan India
               </p>
             </div>
@@ -526,7 +525,7 @@ const Home = () => {
                 <Countup number={6000} startDelay={0.5} />
                 <div>+</div>
               </div>
-              <p className="text-[#6F757C] text-[10px] sm:text-base 2xl:text-2xl text-center">
+              <p className="text-[#6F757C] text-[10px] sm:text-base  text-center">
                 Retails and Distributors
               </p>
             </div>
@@ -540,7 +539,7 @@ const Home = () => {
                 <Countup number={7000} startDelay={0.5} />
                 <div>+</div>
               </div>
-              <p className="text-[#6F757C] text-[10px] sm:text-base 2xl:text-2xl text-center">
+              <p className="text-[#6F757C] text-[10px] sm:text-base  text-center">
                 Working Professionals
               </p>
             </div>

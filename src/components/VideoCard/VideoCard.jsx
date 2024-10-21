@@ -7,7 +7,7 @@ const VideoCard = () => {
   return (
     <div className="border group/video  rounded-xl overflow-hidden">
       <div className="w-full  object-cover relative ">
-        <img src={classes} alt="" />
+        <img className="w-full" src={classes} alt="" />
 
         <div className="absolute p-1 size-6 sm:!size-8 md:!size-10 lg:!size-12 rounded-full bg-white right-4 bottom-4 flex justify-center items-center group-hover/video:scale-125 duration-500">
           <img src={newPlayButtonIcon} alt="" className="size-full object-contain" />

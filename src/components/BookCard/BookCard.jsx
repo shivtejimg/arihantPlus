@@ -47,7 +47,7 @@ const BookCard = ({ data }) => {
       >
         <div className="flex items-center justify-between">
           {data?.discount_percentage && (
-            <p className="text-white bg-primary py-1 leading-none md:py-1.5 px-2 md:px-1.5 text-[9px] md:text-xs 2xl:text-base font-bold rounded-full ">
+            <p className="text-white bg-primary py-1 !leading-[14px] md:py-1.5 px-2 md:px-1.5 text-[9px] md:text-xs 2xl:text-base font-bold rounded-full ">
               {String(data?.discount_percentage)?.includes("%")
                 ? data?.discount_percentage
                 : data?.discount_percentage + " %"}
@@ -93,8 +93,8 @@ const BookCard = ({ data }) => {
           <div className="text-xs max-md:tracking-[0.12px] md:text-sm 2xl:text-xl font-semibold text-black  w-full text-ellipsis line-clamp-2 ">
             {data?.name}
           </div>
-          <div className="flex  justify-between items-center pt-2.5 sm:pt-3.5 md:pt-6 pb-1.5 sm:pb-4 md:pb-3.5">
-            <div className="flex gap-2 items-center">
+          <div className="flex  justify-between items-center pt-2.5 sm:pt-3.5 md:pt-6 pb-1.5 sm:pb-4 md:pb-3.5 max-md:border-b max-md:border-gray3">
+            <div className="flex gap-2 items-center ">
               {data?.discounted_price && data?.discounted_price != "0" ? (
                 <>
                   <span className="text-xs sm:text-sm md::text-base 2xl:text-2xl font-medium line-through text-black ">

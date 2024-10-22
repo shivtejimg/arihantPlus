@@ -6,19 +6,19 @@ import newPlayIcon from "../../assets/img/newPlayIcon.svg";
 
 const RecommendedComponent = () => {
   return (
-    <div className="bg-secondary pb-12">
+    <div className="bg-secondary lg:py-24">
     <div className="max-w-6xl 2xl:w-full 2xl:max-w-full 2xl:px-40  px-6 mx-auto ">
-      <p className="pt-10 pb-8 text-2xl sm:text-3xl font-semibold text-white">
+      <p className=" pb-12 text-2xl sm:text-3xl font-semibold text-white">
         {" "}
         Recommended/Review by Topper&apos;s & Teacher&apos;s
       </p>
       <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="px-4 py-2 rounded-md group items-center bg-[#FCEAAF] hover:shadow-2xl hover:shadow-[#FCEAAF]/40 grid grid-cols-12">
+        <div className="px-[26px] py-5 h-[238px] rounded-md group items-center bg-[#FCEAAF] hover:shadow-2xl hover:shadow-[#FCEAAF]/40 grid grid-cols-12">
           <div className="col-span-7 ">
-            <p className="text-sm font-semibold 2xl:text-2xl text-black">
+            <p className="text-sm font-semibold 2xl:text-2xl text-black line-clamp-2 text-ellipsis">
               JEE Main Toppers
             </p>
-            <p className="text-xl 2xl:text-2xl font-semibold text-[#6F757C] mt-4 leading-[120%] pb-2">
+            <p className="text-xl line-clamp-3 text-ellipsis font-semibold text-[#6F757C] mt-4 leading-[120%] pb-2">
               Anish Kr. Singh
             </p>
             <p className="text-sm font-medium text-black 2xl:text-lg">
@@ -43,12 +43,12 @@ const RecommendedComponent = () => {
             />
           </div>
         </div>
-        <div className="rounded-md px-4 py-2 group items-center bg-[#CCB9C4] hover:shadow-2xl hover:shadow-[#CCB9C4]/40 grid grid-cols-12">
+        <div className="rounded-md px-[26px] py-5 h-[238px] group items-center bg-[#CCB9C4] hover:shadow-2xl hover:shadow-[#CCB9C4]/40 grid grid-cols-12">
           <div className="col-span-7 ">
-            <p className="text-sm font-semibold 2xl:text-2xl text-black">
+            <p className="text-sm font-semibold 2xl:text-2xl text-black line-clamp-2 text-ellipsis">
               Recommended by Teachers, Trusted by Toppers
             </p>
-            <p className="text-xl 2xl:text-2xl font-semibold text-[#6F757C] mt-4 leading-[120%] pb-2">
+            <p className="text-xl line-clamp-2 text-ellipsis font-semibold text-[#6F757C] mt-2 leading-[120%] pb-1">
               All in One 11&12 Books
             </p>
             <p className="text-sm font-medium text-black 2xl:text-lg">
@@ -72,12 +72,12 @@ const RecommendedComponent = () => {
             />
           </div>
         </div>
-        <div className="rounded-md px-4 py-2 group items-center bg-[#FCEAAF] hover:shadow-2xl hover:shadow-[#FCEAAF]/40 grid grid-cols-12">
+        <div className="rounded-md px-[26px] py-5 h-[238px] group items-center bg-[#FCEAAF] hover:shadow-2xl hover:shadow-[#FCEAAF]/40 grid grid-cols-12">
           <div className="col-span-7 ">
-            <p className="text-sm font-semibold 2xl:text-2xl text-black">
+            <p className="text-sm font-semibold 2xl:text-2xl text-black line-clamp-2 text-ellipsis">
               JEE Main Toppers
             </p>
-            <p className="text-xl 2xl:text-2xl font-semibold text-[#6F757C] mt-4 leading-[120%] pb-2">
+            <p className="text-xl line-clamp-3 text-ellipsis font-semibold text-[#6F757C] mt-4 leading-[120%] pb-2">
               Anish Kr. Singh
             </p>
             <p className="text-sm font-medium text-black 2xl:text-lg">

@@ -733,19 +733,19 @@ const BooksDetails = () => {
             </div>
 
             <div className="col-span-4 lg:col-span-3 max-lg:hidden">
-              <div className="border border-gray1 p-3  lg:p-4 rounded-3xl">
+              <div className="border border-[#757676] p-4 lg:p-4 rounded-3xl">
                 {data?.prices?.length
                   ? data?.prices?.map((item) => (
                     <div
-                      className={`rounded-xl p-2 lg:p-3 border-black hover:bg-yellow4 border mb-2 ${selectedPackage === "1" ? "bg-yellow4" : ""
+                      className={`rounded-xl p-2 lg:p-3 border-black2 hover:bg-yellow4 border-[1.5px] mb-2 ${selectedPackage === "1" ? "bg-yellow4" : ""
                         }`}
                       onClick={() => setSelectedPackage("1")}
                       key={item?.name}
                     >
-                      <p className="font-normal text-sm lg:text-base 2xl:text-xl">
+                      <p className="font-normal text-sm lg:text-base leading-5 text-black2">
                         Paperback
                       </p>
-                      <p className="text-base lg:text-lg 2xl:text-2xl text-black font-semibold">
+                      <p className="text-base lg:text-lg  text-black2 font-semibold">
                         MRP: 770
                       </p>
                     </div>
@@ -766,7 +766,7 @@ const BooksDetails = () => {
                 </div> */}
 
                 <div className="flex justify-between mt-6 items-start">
-                  <div className="text-base 2xl:text-2xl font-bold">
+                  <div className="text-base leading-5 font-bold text-black2 text-nowrap">
                     Buy new:
                   </div>
                   <div className="text-right">
@@ -774,9 +774,9 @@ const BooksDetails = () => {
                       <span className="size-5 *:size-5 *:object-contain">
                         <img src={rupee} alt="" />
                       </span>
-                      <span className="font-semibold 2xl:text-xl">570.00</span>
+                      <span className="text-base leading-5 font-bold text-black2 text-nowrap">570.00</span>
                     </div>
-                    <p className="text-sm  2xl:text-lg font-semibold text-black   text-right">
+                    <p className="text-sm font-semibold text-black2 text-right">
                       (570.00 incl. GST)
                     </p>
                     <p className="text-sm 2xl:text-lg font-semibold text-gray2 text-right">
